@@ -6,9 +6,8 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.static('public'));
 
-app.use(express.urlencoded({extended:true}));
-app.use(express.json());
+app.get('/api/notes')
 
 app.listen(PORT, () => {
-    console.log('server available at localhost${PORT}');
+    console.log(`server available at https://localhost:${PORT}`);
 });
